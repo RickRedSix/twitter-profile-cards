@@ -1,7 +1,7 @@
-from flask import Blueprint
+from flask import Blueprint, Response
 from TwitterAPI import TwitterAPI
 
-import os
+import os, json
 
 CONSUMER_KEY = os.environ.get('CONSUMER_KEY', None)
 CONSUMER_SECRET = os.environ.get('CONSUMER_SECRET', None)
@@ -23,11 +23,6 @@ def getUserDetails(handle):
 
     twitterAPI = initApiObject()
             
-    messageReplyJson = '{"event":{"type":"message_create","message_create":{"target":{"recipient_id":"' + userID + '"},"message_data":{"text":"Hello World!"}}}}'
-        
-    #ignore casing
-    if(messageText.lower() == 'hello bot'):
-            
-        r = twitterAPI.request('direct_messages/events/new', messageReplyJson)
+    r = twitterAPI.request('users/show', {'screen_name': handle})
           
-    return None      
+    return Response(json.dumps(r.json()),  mimetype='application/json')      
