@@ -54,12 +54,15 @@ header {
     height: 25px;
     width: auto; }
 
-/*================ INTRO SECTION ================*/
-.introduction-wrapper {
+.section-wrapper {
   padding-top: 49.7%;
   position: relative; }
+  
+  .intro-wrapper {
+    padding-top: 30.7%;      
+  }
 
-.introduction-content {
+.section-content {
 /*
   background-size: cover;
   background-position: center;
@@ -75,20 +78,20 @@ header {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  .introduction-content .pbt-logo {
+  .section-content .pbt-logo {
     width: 55%;
     height: auto;
     margin-bottom: 3%; }
-  .introduction-content h1 {
+  .section-content h1 {
     font-family: 'Helvetica Neue Bold', sans-serif;      
     color: #FFF;
     font-size: 4vw;
     width: 46%; }    
-  .introduction-content p {
+  .section-content p {
     color: #FFF;
     font-size: 1.18vw;
     width: 46%; }
-  .introduction-content .button-link {
+  .section-content .button-link {
     margin: 0;
     margin-top: 4%;
     display: inline-block; }
@@ -106,26 +109,91 @@ header {
     padding: 7px;      
   }
 
+#twitter-card-conatiner, #twitter-card-conatiner-rear {
+    width: 519px;
+    height: 348px;
+    
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    padding: 5%;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    display: none;
+}
+
+#twitter-card-conatiner-rear {
+    
+}
+
+#twitter-card-conatiner .twitter-logo, #twitter-card-conatiner-rear .twitter-logo {
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    
+    width: 5%;
+    height: auto;   
+}
+
+#twitter-profile-name, .twitter-card-title-rear {
+    margin: 0;
+    margin-top: 18%;
+    color: #FFF;    
+    font-size: 2.5em;    
+    font-family: 'Helvetica Neue Bold', sans-serif;
+}
+
+.twitter-card-title-rear {
+
+}
+
+#twitter-profile-handle, #twitter-profile-handle-rear {
+    color: #FFF;    
+    font-size: 1.25em;    
+    font-family: 'Helvetica Neue Bold', sans-serif;    
+    margin: 1% 0;
+}
+
+#twitter-profile-handle-rear {
+
+}
+
+#twitter-profile-bio {
+    color: #FFF;    
+    font-size: 0.9em;    
+    font-family: 'Helvetica Neue', sans-serif;    
+    margin: 1.25em 0;    
+    width: 100%;
+}
+
+#profile-picture {
+    height: 75%;
+    width: auto;    
+    float: left;    
+    margin-top: 7.5%;    
+    margin-right: 6%;
+}
+
 @media screen and (max-width: 68.75em) {
   .button-link {
     padding: 11px 22px;
     font-size: 14px;
     border-radius: 22px; }
 
-  .introduction-wrapper {
+  .section-wrapper {
     padding-top: initial; }
-    .introduction-wrapper .introduction-content {
+    .section-wrapper .section-content {
       position: relative; }
-      .introduction-wrapper .introduction-content p {
+      .section-wrapper .section-content p {
         font-size: 13px; }
 }
 
 @media screen and (max-width: 40.4em) {
-  .introduction-content .pbt-logo {
+  .section-content .pbt-logo {
     width: 100%; }
-  .introduction-content p {
+  .section-content p {
     width: 100%; }
-  .introduction-content .button-link {
+  .section-content .button-link {
     display: block;
     text-align: center;
     margin: 40px auto; }
